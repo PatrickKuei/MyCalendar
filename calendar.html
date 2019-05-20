@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<link rel="stylesheet" href="calStyle.css">
+</head>
+
+<body>
+<div id="textDiv">
+<div>
+<textarea id="textArea" name="textContent" id="" cols="30" rows="10">INPUT¡@YOUR SCHEDULE HERE</textarea>
+</div>
+<div style="text-align: right;">
+<input class="submitBtn" type="button" value="submit" onclick="contentSubmit()">
+</div>
+</div>
+
+<div class="topBar">
+<button id="preMonth">&#10094;</button>
+<select type="text" id="selYear" onchange="selYFunction()">
+<option value="0"></option>
+<option value="1"></option>
+<option value="2"></option>
+<option value="3" selected id="seledY"></option>
+<option value="4"></option>
+<option value="5"></option>
+<option value="6"></option>
+</select>
+<select type="text" id="selMonth" onchange="selMFunction()">
+<option value="0"></option>
+<option value="1"></option>
+<option value="2"></option>
+<option value="3"></option>
+<option value="4" selected></option>
+<option value="5"></option>
+<option value="6"></option>
+<option value="7"></option>
+<option value="8"></option>
+<option value="9"></option>
+<option value="10"></option>
+<option value="11"></option>
+</select>
+<button id="nextMonth">&#10095;</button>
+</div>
+
+<table id="calTable" align="center">
+<thead>
+<tr class="tWeek">
+<th style="background-color:#edfdc7">Sunday</th>
+<th>Monday</th>
+<th>Tuesday</th>
+<th>Wednesday</th>
+<th>Thursday</th>
+<th>Friday</th>
+<th style="background-color:#edfdc7">Saturday</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tDate">
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<div class="tContent" onclick="clickTCon(this)">123</div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)">456</div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td></td>
+</tr>
+<tr class="tDate">
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td></td>
+</tr>
+<tr class="tDate">
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td></td>
+</tr>
+<tr class="tDate">
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td></td>
+</tr>
+<tr class="tDate">
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td></td>
+</tr>
+<tr class="tDate">
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+<td class="dDate"></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td>
+<div class="tContent" onclick="clickTCon(this)"></div>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<script src="calenAnime.js"></script>
+</body>
+
+</html>
